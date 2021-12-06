@@ -3,7 +3,10 @@ let counter2 = 0;
 let current1 = 0;
 let current2 = 0;
 
-let 
+let player1 = prompt('Enter name for player 1');
+let player2 = prompt('Enter name for player 2');
+document.getElementById('start1').innerHTML = player1;
+document.getElementById('start2').innerHTML = player2;
 
 const reload = () => {
   element = document.getElementById('new');
