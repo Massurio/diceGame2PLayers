@@ -26,8 +26,6 @@ const reload = () => {
     document.getElementById('score1').innerHTML = '0';
     document.getElementById('score2').innerHTML = '0';
     //not to be include for end
-    document.getElementById('status1').innerHTML = '';
-    document.getElementById('status2').innerHTML = '';
   });
 };
 
@@ -43,24 +41,20 @@ function roll() {
   document.getElementById('score2').innerHTML = counter2;
 
   if (counter1 > 20) {
-    document.getElementById('status1').innerHTML = 'Winner!';
     current1 = current1 + 1;
     document.getElementById('wins1').innerHTML = current1;
     counter1 = 0;
   }
   if (counter1 < 20 && counter1 == 1) {
-    document.getElementById('status1').innerHTML = 'You lost!';
     document.getElementById('score1').innerHTML = '0';
     counter1 = 0;
   }
 
   if (counter2 > 20) {
-    document.getElementById('status2').innerHTML = 'Winner!';
     current2 = current2 + 1;
     document.getElementById('wins2').innerHTML = current2;
     counter2 = 0;
   } else if (counter2 < 20 && counter2 == 1) {
-    document.getElementById('status2').innerHTML = 'You lost!';
     document.getElementById('score2').innerHTML = '0';
     counter2 = 0;
   }
