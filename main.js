@@ -25,7 +25,8 @@ const reload = () => {
     current2 = 0;
     document.getElementById('score1').innerHTML = '0';
     document.getElementById('score2').innerHTML = '0';
-    //not to be include for end
+    document.getElementById('wins1').innerHTML = '0';
+    document.getElementById('wins2').innerHTML = '0';
   });
 };
 
