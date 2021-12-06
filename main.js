@@ -3,6 +3,8 @@ let counter2 = 0;
 let current1 = 0;
 let current2 = 0;
 
+let 
+
 const reload = () => {
   element = document.getElementById('new');
 
