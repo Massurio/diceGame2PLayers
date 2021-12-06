@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(45deg, yellow, red);
+  font-size: 50px;
+}
+
+.main1 {
+  border-left: 8px solid rgb(255, 255, 255);
+  border-top: 8px solid rgb(255, 255, 255);
+  border-bottom: 8px solid rgb(255, 255, 255);
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.main2 {
+  border-right: 8px solid rgb(255, 255, 255);
+  border-top: 8px solid rgb(255, 255, 255);
+  border-bottom: 8px solid rgb(255, 255, 255);
+  background-image: linear-gradient(45deg, rgb(0, 121, 235), rgb(255, 251, 0));
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: aliceblue;
+}
+img {
+  align-self: center;
+}
+button {
+  background-color: darkgoldenrod;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.new {
+  font-size: 30px;
+  margin-top: -250px;
+  position: absolute;
+  padding: 5px;
+}
+.new:hover {
+  border: rgb(137, 185, 224) 3px solid;
+  cursor: pointer;
+}
+.roll {
+  font-size: 30px;
+  margin-top: 250px;
+  position: absolute;
+}
+.roll:hover {
+  border: rgb(137, 185, 224) 3px solid;
+  cursor: pointer;
+}
+.hold {
+  font-size: 30px;
+  margin-top: 350px;
+  position: absolute;
+}
+.hold:hover {
+  border: rgb(137, 185, 224) 3px solid;
+  cursor: pointer;
+}
+#top {
+  margin-top: -320px;
+  position: absolute;
+  width: 190px;
+}
+#bottom {
+  margin-top: -400px;
+  margin-left: 90px;
+  position: absolute;
+  width: 190px;
+}
+.diceResult {
+  font-size: 30px;
+  margin-top: 50px;
+  position: absolute;
+}
+.plus {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.current {
+  font-size: 20px;
+  background-color: chocolate;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}

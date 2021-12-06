@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Game 2Players</title>
+  </head>
+  <body>
+    <div class="main1">
+      <p id="start1">Player 1</p>
+      <p id="status1"></p>
+      <p id="score1">0</p>
+
+      <div class="current">
+        <p>CURRENT</p>
+        <p id="wins1">0</p>
+      </div>
+    </div>
+
+    <div onclick="reload()" id="new" class="new">
+      <img class="plus" src="./images/plus.png" alt="" /> NEW GAME
+    </div>
+
+    <div class="diceResult" id="img"><img class="img" /></div>
+
+    <p id="top"></p>
+    <p id="bottom" ></p>
+
+    <div class="main2">
+      <p id="start2">Player 1</p>
+      <p id="status2"></p>
+      <p id="score2">0</p>
+
+      <div class="current">
+        <p>CURRENT</p>
+        <p id="wins2">0</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
