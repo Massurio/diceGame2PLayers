@@ -64,6 +64,7 @@ button {
   margin-top: 250px;
   position: absolute;
   width: 250px;
+  text-align: center;
 }
 .roll:hover {
   border: rgb(137, 185, 224) 3px solid;
@@ -80,14 +81,15 @@ button {
 }
 #top {
   margin-top: -320px;
+  margin-left: -30px;
   position: absolute;
-  width: 190px;
+  width: 250px;
 }
 #bottom {
   margin-top: -400px;
-  margin-left: 90px;
+  margin-left: 61px;
   position: absolute;
-  width: 190px;
+  width: 200px;
 }
 .diceResult {
   font-size: 30px;
