@@ -20,7 +20,7 @@ const reload = () => {
 
     const hold = document.getElementById('bottom');
     hold.innerHTML = ` 
-    <div onclick="reload()" id="hold" class="hold">
+    <div id="hold" class="hold">
       <img class="plus" src="./images/hold.png" alt="" /> HOLD
     </div>`;
 
@@ -30,38 +30,70 @@ const reload = () => {
     current2 = 0;
     document.getElementById('score1').innerHTML = '0';
     document.getElementById('score2').innerHTML = '0';
-    document.getElementById('wins1').innerHTML = '0';
-    document.getElementById('wins2').innerHTML = '0';
+    document.getElementById('total1').innerHTML = '0';
+    document.getElementById('total2').innerHTML = '0';
   });
 };
 
-function roll() {
-  var randomNumber = Math.floor(Math.random() * 6) + 1;
-  document
-    .querySelector('.img')
-    .setAttribute('src', './images/dice' + randomNumber + '.png');
-  counter1 = counter1 + randomNumber;
-  document.getElementById('score1').innerHTML = counter1;
+const elhold = document.getElementById('bottom');
+elhold.addEventListener('click', () => {
+  hold();
+});
+let player1 = true;
 
-  counter2 = counter2 + randomNumber;
-  document.getElementById('score2').innerHTML = counter2;
-
-  if (counter1 > 20) {
-    current1 = current1 + 1;
-    document.getElementById('total1').innerHTML = current1;
-    counter1 = 0;
-  }
-  if (counter1 < 20 && counter1 == 1) {
-    document.getElementById('score1').innerHTML = '0';
-    counter1 = 0;
-  }
-
-  if (counter2 > 20) {
-    current2 = current2 + 1;
-    document.getElementById('total2').innerHTML = current2;
-    counter2 = 0;
-  } else if (counter2 < 20 && counter2 == 1) {
-    document.getElementById('score2').innerHTML = '0';
-    counter2 = 0;
+if (player1) {
+  document.getElementById('main1').style.backgroundColor = 'rgb(255, 251, 0)';
+}
+const hold = () => {
+  if (player1) {
+    player1 = false;
+    console.log('false');
+    document.getElementById('main2').style.backgroundColor = 'rgb(0, 121, 235)';
+    document.getElementById('main1').style.backgroundColor = 'white';
+  } else {
+    player1 = true;
+    console.log('true');
+    document.getElementById('main2').style.backgroundColor = 'white';
+    document.getElementById('main1').style.backgroundColor = 'rgb(255, 251, 0)';
   }
 };
+
+function roll() {
+  if (player1 == true) {
+    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+    document
+      .querySelector('.img')
+      .setAttribute('src', './images/dice' + randomNumber1 + '.png');
+
+    counter1 = counter1 + randomNumber1;
+    document.getElementById('score1').innerHTML = counter1;
+
+    if (counter1 > 20) {
+      current1 = current1 + 1;
+      document.getElementById('total1').innerHTML = current1;
+      counter1 = 0;
+    }
+    if (counter1 < 20 && counter1 == 1) {
+      document.getElementById('score1').innerHTML = '0';
+      counter1 = 0;
+    }
+  } else {
+    var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+    document
+      .querySelector('.img')
+      .setAttribute('src', './images/dice' + randomNumber2 + '.png');
+
+    counter2 = counter2 + randomNumber2;
+    document.getElementById('score2').innerHTML = counter2;
+
+    if (counter2 > 20) {
+      current1 = current2 + 1;
+      document.getElementById('total2').innerHTML = current2;
+      counter2 = 0;
+    }
+    if (counter2 < 20 && counter2 == 1) {
+      document.getElementById('score2').innerHTML = '0';
+      counter2 = 0;
+    }
+  }
+}
