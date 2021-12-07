@@ -37,13 +37,26 @@ const reload = () => {
 
 const elhold = document.getElementById('bottom');
 elhold.addEventListener('click', () => {
+  if (player1) {
+    current1 = current1 + counter1;
+    document.getElementById('total1').innerHTML = current1;
+    document.getElementById('score1').innerHTML = '0';
+    counter1 = 0;
+  } else {
+    current2 = current2 + counter2;
+    document.getElementById('total2').innerHTML = current2;
+    document.getElementById('score2').innerHTML = '0';
+    counter2 = 0;
+  }
   hold();
 });
+
 let player1 = true;
 
 if (player1) {
   document.getElementById('main1').style.backgroundColor = 'rgb(255, 251, 0)';
 }
+
 const hold = () => {
   if (player1) {
     player1 = false;
