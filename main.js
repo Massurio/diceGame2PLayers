@@ -3,15 +3,17 @@ let counter2 = 0;
 let current1 = 0;
 let current2 = 0;
 
-// let player1 = prompt('Enter name for player 1');
-// let player2 = prompt('Enter name for player 2');
-// document.getElementById('start1').innerHTML = player1;
-// document.getElementById('start2').innerHTML = player2;
+let name1 = prompt('Enter name for player 1');
+let name2 = prompt('Enter name for player 2');
+document.getElementById('start1').innerHTML = name1;
+document.getElementById('start2').innerHTML = name2;
 
-const reload = () => {
+const newGame = () => {
   element = document.getElementById('new');
 
   element.addEventListener('click', () => {
+    document.getElementById('start1').innerHTML = name1;
+    document.getElementById('start2').innerHTML = name2;
     const roll = document.getElementById('top');
     roll.innerHTML = `<div onclick="roll()" id="roll" class="roll">
       <img class="plus" src="./images/roll.png" alt="" />
@@ -42,11 +44,23 @@ elhold.addEventListener('click', () => {
     document.getElementById('total1').innerHTML = current1;
     document.getElementById('score1').innerHTML = '0';
     counter1 = 0;
+    if (current1 >= 20) {
+      document.getElementById('roll').innerHTML = '';
+      document.getElementById('hold').innerHTML = '';
+      document.getElementById('start1').innerHTML = 'Winner!';
+      document.getElementById('start2').innerHTML = 'Loser!';
+    }
   } else {
     current2 = current2 + counter2;
     document.getElementById('total2').innerHTML = current2;
     document.getElementById('score2').innerHTML = '0';
     counter2 = 0;
+    if (current2 >= 20) {
+      document.getElementById('roll').innerHTML = '';
+      document.getElementById('hold').innerHTML = '';
+      document.getElementById('start2').innerHTML = 'Winner!';
+      document.getElementById('start1').innerHTML = 'Loser!';
+    }
   }
   hold();
 });
@@ -81,14 +95,10 @@ function roll() {
     counter1 = counter1 + randomNumber1;
     document.getElementById('score1').innerHTML = counter1;
 
-    if (counter1 > 20) {
-      current1 = current1 + 1;
-      document.getElementById('total1').innerHTML = current1;
-      counter1 = 0;
-    }
-    if (counter1 < 20 && counter1 == 1) {
+    if (randomNumber1 == 1) {
       document.getElementById('score1').innerHTML = '0';
       counter1 = 0;
+      hold(false);
     }
   } else {
     var randomNumber2 = Math.floor(Math.random() * 6) + 1;
@@ -99,14 +109,10 @@ function roll() {
     counter2 = counter2 + randomNumber2;
     document.getElementById('score2').innerHTML = counter2;
 
-    if (counter2 > 20) {
-      current1 = current2 + 1;
-      document.getElementById('total2').innerHTML = current2;
-      counter2 = 0;
-    }
-    if (counter2 < 20 && counter2 == 1) {
+    if (randomNumber2 == 1) {
       document.getElementById('score2').innerHTML = '0';
       counter2 = 0;
+      hold(true);
     }
   }
 }
