@@ -63,6 +63,7 @@ button {
   font-size: 30px;
   margin-top: 250px;
   position: absolute;
+  width: 200px;
 }
 .roll:hover {
   border: rgb(137, 185, 224) 3px solid;
