@@ -97,6 +97,7 @@ function roll() {
 
     if (randomNumber1 == 1) {
       document.getElementById('score1').innerHTML = '0';
+      alert('Oops 0 back to 0! lol');
       counter1 = 0;
       hold(false);
     }
@@ -111,6 +112,7 @@ function roll() {
 
     if (randomNumber2 == 1) {
       document.getElementById('score2').innerHTML = '0';
+      alert('Oops 0 back to 0! lol');
       counter2 = 0;
       hold(true);
     }
