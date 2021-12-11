@@ -34,6 +34,7 @@ const newGame = () => {
     document.getElementById('score2').innerHTML = '0';
     document.getElementById('total1').innerHTML = '0';
     document.getElementById('total2').innerHTML = '0';
+    document.getElementById('rules')
   });
 };
 
