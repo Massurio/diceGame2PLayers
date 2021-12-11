@@ -44,22 +44,24 @@ elhold.addEventListener('click', () => {
     document.getElementById('total1').innerHTML = current1;
     document.getElementById('score1').innerHTML = '0';
     counter1 = 0;
-    if (current1 >= 80) {
+    if (current1 >= 10) {
       document.getElementById('roll').innerHTML = '';
       document.getElementById('hold').innerHTML = '';
       document.getElementById('start1').innerHTML = 'Winner!';
       document.getElementById('start2').innerHTML = 'Loser!';
+      document.getElementById('rules').innerHTML = '';
     }
   } else {
     current2 = current2 + counter2;
     document.getElementById('total2').innerHTML = current2;
     document.getElementById('score2').innerHTML = '0';
     counter2 = 0;
-    if (current2 >= 80) {
+    if (current2 >= 10) {
       document.getElementById('roll').innerHTML = '';
       document.getElementById('hold').innerHTML = '';
       document.getElementById('start2').innerHTML = 'Winner!';
       document.getElementById('start1').innerHTML = 'Loser!';
+      document.getElementById('rules').innerHTML = '';
     }
   }
   hold();
