@@ -3,10 +3,10 @@ let counter2 = 0;
 let current1 = 0;
 let current2 = 0;
 
-// let name1 = prompt('Enter name for player 1');
-// let name2 = prompt('Enter name for player 2');
-// document.getElementById('start1').innerHTML = name1;
-// document.getElementById('start2').innerHTML = name2;
+let name1 = prompt('Enter name for player 1');
+let name2 = prompt('Enter name for player 2');
+document.getElementById('start1').innerHTML = name1;
+document.getElementById('start2').innerHTML = name2;
 
 const newGame = () => {
   element = document.getElementById('new');
@@ -45,7 +45,7 @@ elhold.addEventListener('click', () => {
     document.getElementById('total1').innerHTML = current1;
     document.getElementById('score1').innerHTML = '0';
     counter1 = 0;
-    if (current1 >= 2) {
+    if (current1 >= 80) {
       document.getElementById('roll').innerHTML = '';
       document.getElementById('hold').innerHTML = '';
       document.getElementById('start1').innerHTML = 'Winner!';
@@ -57,7 +57,7 @@ elhold.addEventListener('click', () => {
     document.getElementById('total2').innerHTML = current2;
     document.getElementById('score2').innerHTML = '0';
     counter2 = 0;
-    if (current2 >= 2) {
+    if (current2 >= 80) {
       document.getElementById('roll').innerHTML = '';
       document.getElementById('hold').innerHTML = '';
       document.getElementById('start2').innerHTML = 'Winner!';
